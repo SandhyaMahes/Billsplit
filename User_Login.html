@@ -1,0 +1,35 @@
+<html>
+<head>
+  <title>Bill Splitting</title>
+ <script>
+ function validateform(){  
+var id = document.login.person_id.value;  
+var password=document.login.password.value;  
+  
+if (id==null || id==""){  
+  alert("Please fill out PERSON_ID field");  
+  return false;  
+}
+else if (password==null || password==""){  
+  alert("Password field cannot be blank");  
+  return false;  
+}
+}
+</script>
+</head>
+<body>
+<center>
+<form name="login" action="http://localhost:8080/billsplit/pass" onsubmit="return validateform()" method="post">
+<h3><center>BILLSPLIT</center></h3><br><br>
+<center>User Login</center>
+Enter PERSON_ID:<br>
+  <input type="number" name="person_id"><br>
+Enter password:<br>
+  <input type="password" name="password"><br>
+
+<input type ="submit" value="Login">
+<br><br>
+</center>
+</form>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                               http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+               version="2.5">
+<servlet>
+ <servlet-name>Billsplit</servlet-name>
+<servlet-class>com.billsplit.servlet.Billsplit</servlet-class>
+</servlet>
+<servlet>
+ <servlet-name>PasswordAuthentication</servlet-name>
+<servlet-class>com.billsplit.servlet.PasswordAuthentication</servlet-class>
+</servlet>
+<servlet>
+ <servlet-name>Work</servlet-name>
+<servlet-class>com.billsplit.servlet.p1.Work</servlet-class>
+</servlet>
+<servlet>
+ <servlet-name>RemoveRoommate</servlet-name>
+<servlet-class>com.billsplit.servlet.RemoveRoommate</servlet-class>
+</servlet>
+<servlet>
+ <servlet-name>AddRoommate</servlet-name>
+<servlet-class>com.billsplit.servlet.AddRoommate</servlet-class>
+</servlet>
+<servlet>
+ <servlet-name>AddBill</servlet-name>
+<servlet-class>com.billsplit.servlet.AddBill</servlet-class>
+</servlet>
+<servlet>
+ <servlet-name>ViewBills</servlet-name>
+<servlet-class>com.billsplit.servlet.ViewBills</servlet-class>
+</servlet>
+<servlet>
+ <servlet-name>UserBills</servlet-name>
+<servlet-class>com.billsplit.servlet.UserBills</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>PasswordAuthentication</servlet-name>
+ <url-pattern>/pass</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+<servlet-name>AddRoommate</servlet-name>
+ <url-pattern>/add</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>UserBills</servlet-name>
+ <url-pattern>/bills</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>RemoveRoommate</servlet-name>
+ <url-pattern>/remove</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>AddBill</servlet-name>
+ <url-pattern>/addbill</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>Billsplit</servlet-name>
+ <url-pattern>/demo</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+<servlet-name>ViewBills</servlet-name>
+ <url-pattern>/view</url-pattern>
+</servlet-mapping>
+</web-app>

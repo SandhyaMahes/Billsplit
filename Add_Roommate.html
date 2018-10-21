@@ -1,0 +1,47 @@
+<html>
+<head>
+ <title>Add roommate</title>
+<!-- <link rel="stylesheet" type="text/css" href="styles.css">-->
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+</style>
+<script>
+  function validateform(){  
+var name=document.add.name.value;  
+var password=document.add.psw.value;  
+  
+if (name==null || name==""){  
+  alert("Name cannot be blank"); 
+  formval=1;  
+  return false;  
+}
+else if (password==null || password==""){  
+  alert("Password field cannot be blank");
+  formval=1;  
+  return false;  
+}
+else if(password.length<6){  
+  alert("Password must be at least 6 characters long.");  
+  formval=1;
+  return false;  
+  }
+  else{
+  alert("Roommate added");}
+  }
+</script>  
+</head>
+<body>
+<form name="add" action="http://localhost:8080/billsplit/add" onsubmit="return validateform()" method="post">
+<center>Add roommate</center>
+Enter name of new roommate:<br>
+  <input type="text" name="name"><br>
+Roommate password:<br>
+<input type="password" name="psw"><br>
+(Password must contain atleast 6 characters)<br><br>
+<input id="myBtn" type ="submit" value="Add"><br><br>
+</form>
+<form action="http://localhost:8080/billsplit/Home.jsp">
+<input type ="submit" value="Home"><br><br>
+</form>
+</body>
+</html>
